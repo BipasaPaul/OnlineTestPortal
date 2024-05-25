@@ -1,1 +1,9 @@
-# OnlineTestPortal
+The provided Java code defines an online test application using Swing for the graphical user interface. The class 'OnlineTest' extends 'JFrame' and implements 'ActionListener' to handle events such as button clicks. The application includes a 'JLabel' to display questions, an array of 'JRadioButton' for multiple-choice answers, and two 'JButton' components for navigation: "Next" and "Bookmark". The 'ButtonGroup' ensures that only one radio button can be selected at a time.
+
+Upon initialization in the constructor 'OnlineTest(String s)', the frame is set up with a title, the label, radio buttons, and buttons are added to the frame, and their bounds are configured. The 'set()' method is called to display the first question. The frame is set to a specific size and location, and its visibility is enabled. The layout is set to 'null' for absolute positioning of components.
+
+The 'actionPerformed(ActionEvent e)' method manages user interactions. When the "Next" button is clicked, the current answer is checked using the 'check()' method, which verifies if the selected answer is correct. The score is updated, and the next question is displayed. On the last question, the "Next" button is disabled, and the "Bookmark" button text changes to "Result". Clicking the "Bookmark" button saves the current question index in the 'm' array and adds a new button for quick access to the bookmarked question. Clicking a bookmark button retrieves and displays the bookmarked question, and disables the bookmark button to prevent repeated usage.
+
+The 'set()' method updates the label and radio buttons with the current question and its options based on the 'current' index. The 'check()' method validates the selected answer for the current question against the correct answer hardcoded in the method. The 'main(String s[])' method creates an instance of 'OnlineTest', which initiates the entire application, making it ready for user interaction.
+
+Overall, the code provides a simple framework for an online test, handling question navigation, bookmarking, and result calculation using a graphical interface.
